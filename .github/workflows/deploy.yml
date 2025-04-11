@@ -1,0 +1,26 @@
+name: Deploy Frontend to Azure Storage
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Upload static site to Azure Blob Storage
+        uses: azure/cli@v1
+        with:
+          azcliversion: 2.0.72
+          inlineScript: |
+            az storage blob upload-batch \
+              --account-name ${{ secrets.AZURE_STORAGE_ACCOUNT }} \
+              --destination \$web \
+              --source site \
+              --auth-mode key \
+              --account-key ${{ secrets.AZURE_STORAGE_KEY }}
