@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Alunos</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Dashboard - Alunos</h2>
+    <input id="nome" placeholder="Nome" />
+    <input id="cpf" placeholder="CPF" oninput="formatarCPF(this)" />
+    <input type="date" id="nascimento" />
+    <input id="cep" placeholder="CEP" />
+    <select id="plano">
+      <option value="A">Plano A - R$60</option>
+      <option value="B">Plano B - R$80</option>
+      <option value="C">Plano C - R$100</option>
+    </select>
+    <button onclick="salvarAluno()">Cadastrar</button>
+
+    <h3>Alunos Cadastrados:</h3>
+    <ul id="listaAlunos"></ul>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

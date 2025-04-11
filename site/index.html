@@ -1,13 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Academia Corpo em Forma</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - Academia</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <h1>Bem-vindo à Academia Corpo em Forma</h1>
-  <p>Seu site está online na Azure! 🏋️‍♂️</p>
-  <script src="script.js"></script>
+  <div class="container">
+    <h2>Login</h2>
+    <input type="email" id="email" placeholder="Email"/>
+    <input type="password" id="senha" placeholder="Senha"/>
+    <button onclick="login()">Entrar</button>
+    <p id="erro" class="erro"></p>
+  </div>
+  <script>
+    function login() {
+      const email = document.getElementById("email").value;
+      const senha = document.getElementById("senha").value;
+      if (email === "trabalhadordugera@gmail.com" && senha === "ronilegal123") {
+        window.location.href = "dashboard.html";
+      } else {
+        document.getElementById("erro").innerText = "Email ou senha inválidos.";
+      }
+    }
+  </script>
 </body>
 </html>
