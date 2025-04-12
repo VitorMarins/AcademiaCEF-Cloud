@@ -6,7 +6,7 @@ Infraestrutura + Front-end na Azure com Terraform e GitHub Actions
 
 ### Terraform
 ```bash
-cd terraform
+cd infra
 terraform init
 terraform apply
 ```
