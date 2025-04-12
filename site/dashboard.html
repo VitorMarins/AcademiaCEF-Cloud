@@ -1,24 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Dashboard - Alunos</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
     <h2>Dashboard - Alunos</h2>
+    <label for="nome">Nome:</label>
     <input id="nome" placeholder="Nome" />
+
+    <label for="cpf">CPF:</label>
     <input id="cpf" placeholder="CPF" oninput="formatarCPF(this)" />
+
+    <label for="nascimento">Nascimento:</label>
     <input type="date" id="nascimento" />
+
+    <label for="cep">CEP:</label>
     <input id="cep" placeholder="CEP" />
+
+    <label for="plano">Plano:</label>
     <select id="plano">
+      <option disabled selected>Escolha um plano</option>
       <option value="A">Plano A - R$60</option>
       <option value="B">Plano B - R$80</option>
       <option value="C">Plano C - R$100</option>
     </select>
-    <button onclick="salvarAluno()">Cadastrar</button>
+
+    <button id="btnSalvar" onclick="salvarAluno()">Cadastrar</button>
 
     <h3>Alunos Cadastrados:</h3>
     <ul id="listaAlunos"></ul>
