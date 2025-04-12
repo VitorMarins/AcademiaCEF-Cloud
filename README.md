@@ -1,4 +1,4 @@
-# academia-corpo-em-forma
+# Academia-corpo-em-forma
 
 Infraestrutura + Front-end na Azure com Terraform e GitHub Actions
 
@@ -8,6 +8,5 @@ Infraestrutura + Front-end na Azure com Terraform e GitHub Actions
 ```bash
 cd terraform
 terraform init
-terraform plan
 terraform apply
 ```
