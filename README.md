@@ -1,8 +1,9 @@
-# Academia-corpo-em-forma
+# Academia corpo em forma
 
-Infraestrutura + Front-end na Azure com Terraform e GitHub Actions
+Infraestrutura + Web App na Azure com Terraform e GitHub Actions
+Web App Simples para treinar conhecimentos no terraform.
 
-## Como usar
+## Como rodar Infra no Terraform
 
 ### Terraform
 ```bash
